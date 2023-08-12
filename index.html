@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+    <div class="editsContainer">
+        <div class="customize-container">
+            <label>Pomodoro Length:</label>
+            <div class="option">
+                <button class="decrease">-</button>
+                <span id="pomodoroLength">25</span>
+                <button class="increase">+</button>
+            </div>
+
+            <label>Small Break Length:</label>
+            <div class="option">
+                <button class="decrease">-</button>
+                <span id="smallBreakLength">5</span>
+                <button class="increase">+</button>
+            </div>
+
+            <label>Long Break Length:</label>
+            <div class="option">
+                <button class="decrease">-</button>
+                <span id="longBreakLength">15</span>
+                <button class="increase">+</button>
+            </div>
+        </div>
+        <div class="pomodoro-status">
+            <div class="pomodoro-label">Pomodoro</div>
+            <div class="pomodoro-icons">
+                <div class="duration-label"><span id="pomodoroLengthLabel">25</span>m :&nbsp&nbsp&nbsp&nbsp</div>
+                <div class="pomodoro-icon"></div>
+                <div class="pomodoro-icon"></div>
+                <div class="pomodoro-icon"></div>
+                <div class="pomodoro-icon"></div>
+            </div>
+            <div class="pomodoro-label">Break</div>
+            <div class="pomodoro-icons">
+                <div class="duration-label"><span id="breakLengthLabel">5</span>m :&nbsp&nbsp&nbsp&nbsp</div>
+                <div class="break-icon"></div>
+                <div class="break-icon"></div>
+                <div class="break-icon"></div>
+            </div>
+            <div class="pomodoro-icons">
+                <div class="duration-label"><span id="longBreakLengthLabel">15</span>m :&nbsp&nbsp&nbsp&nbsp</div>
+                <div class="break-icon"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="pomodoro-container">
+        <h1>Pomodoro Timer</h1>
+        <div id="timerLabel"></div>
+        <div id="completedPomodoros"></div>
+        <div class="timer">
+            <div id="minutes">25</div>
+            <div>:</div>
+            <div id="seconds">00</div>
+        </div>
+        
+        <div class="button-container">
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+            <button id="skip" hidden="hidden">Skip</button>
+        </div>
+    </div>
+    <div class="todo-container">
+        <h2>To-Do List</h2>
+        <ul id="taskList"></ul>
+        <input type="text" id="task" placeholder="Enter a task">
+        
+    </div>
+
+
+    <script src="script.js" defer></script>
+</body>
+</html>
